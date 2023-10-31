@@ -40,7 +40,7 @@ public class DoubleLinkedList<T> implements ListADT<T> {
 			this.first.prev = actual.prev;
 			this.first.next = actual.next.next;
 			this.count -= 1;
-		}
+		}//
 	}
 	
 	public T removeLast() {
