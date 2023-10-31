@@ -79,6 +79,7 @@ public class UnorderedDoubleLinkedList<T> extends DoubleLinkedList<T> implements
 			previo.next = actual.prev;
 		}
 	}
+	//
 	// A�ade elem detr�s de otro elemento concreto, target,  que ya se encuentra en la lista
 		// �COMPLETAR OPCIONAL!
 
