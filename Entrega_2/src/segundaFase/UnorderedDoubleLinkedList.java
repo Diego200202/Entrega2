@@ -16,6 +16,7 @@ public class UnorderedDoubleLinkedList<T> extends DoubleLinkedList<T> implements
 			this.first = actual.next;
 			this.first.prev = actual;
 		}
+		super.count += 1;
 	}
 	// a�ade un elemento al comienzo
 		// COMPLETAR EL CODIGO Y CALCULAR EL COSTE
@@ -34,6 +35,7 @@ public class UnorderedDoubleLinkedList<T> extends DoubleLinkedList<T> implements
 			this.first.prev = actual.next;
 			actual.next.prev = actual;
 		}
+		super.count += 1;
 	// a�ade un elemento al final 
 		// COMPLETAR EL CODIGO Y CALCULAR EL COSTE
 
@@ -78,6 +80,7 @@ public class UnorderedDoubleLinkedList<T> extends DoubleLinkedList<T> implements
 			actual.prev.prev = previo;
 			previo.next = actual.prev;
 		}
+		super.count += 1;
 	}
 	//
 	// A�ade elem detr�s de otro elemento concreto, target,  que ya se encuentra en la lista
