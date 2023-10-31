@@ -96,6 +96,7 @@ public class DoubleLinkedList<T> implements ListADT<T> {
 	{ return first == null;};
 	
 	public int size() 
+
 	//Determina el n�mero de elementos de la lista
 	{ return count;};
 	
