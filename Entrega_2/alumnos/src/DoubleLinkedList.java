@@ -33,15 +33,23 @@ public class DoubleLinkedList<T> implements ListADT<T> {
 			System.out.println("La lista esta vacia");
 		}else if(this.size() == 1) {
 			this.first = null;
+			this.count -= 1;
 		}else {
-			
+			Node<T> actual = this.first;
+			this.first = this.first.next;
+			this.first.prev = actual.prev;
+			this.first.next = actual.next.next;
+			this.count -= 1;
 		}
 	}
 
 	public T removeLast() {
 	// Elimina el �ltimo elemento de la lista
         // Precondici�n: 
-			// COMPLETAR EL CODIGO Y CALCULAR EL COSTE
+		// COMPLETAR EL CODIGO Y CALCULAR EL COSTE
+		if(isEmpty()) {
+			System.out.println("La lista esta vacia");
+		}
    }
 
 
