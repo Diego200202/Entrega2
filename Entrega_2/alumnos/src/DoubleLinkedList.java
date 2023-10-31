@@ -6,13 +6,13 @@ import java.util.NoSuchElementException;
 public class DoubleLinkedList<T> implements ListADT<T> {
 
 	// Atributos
-	protected Node<T> first;  // apuntador al último
-	protected String descr;  // descripción
+	protected Node<T> first;  // apuntador al ï¿½ltimo
+	protected String descr;  // descripciï¿½n
 	protected int count;
 
 	// Constructor
 	public DoubleLinkedList() {
-               first = null;
+        first = null;
 		descr = "";
 		count = 0;
 	}
@@ -27,17 +27,22 @@ public class DoubleLinkedList<T> implements ListADT<T> {
 
 	public T removeFirst() {
 	// Elimina el primer elemento de la lista
-        // Precondición: 
+        // Precondiciï¿½n: 
 		// COMPLETAR EL CODIGO Y CALCULAR EL COSTE
-
+		if(isEmpty()) {
+			System.out.println("La lista esta vacia");
+		}else if(this.size() == 1) {
+			this.first = null;
+		}else {
+			
+		}
 	}
 
 	public T removeLast() {
-	// Elimina el último elemento de la lista
-        // Precondición: 
+	// Elimina el ï¿½ltimo elemento de la lista
+        // Precondiciï¿½n: 
 			// COMPLETAR EL CODIGO Y CALCULAR EL COSTE
-
-		   }
+   }
 
 
 	public T remove(T elem) {
@@ -49,11 +54,11 @@ public class DoubleLinkedList<T> implements ListADT<T> {
 	//Da acceso al primer elemento de la lista
 	      if (isEmpty())
 	          return null;
-	      else return first.data;
+	      else return this.first;
 	}
 
 	public T last() {
-	//Da acceso al último elemento de la lista
+	//Da acceso al ï¿½ltimo elemento de la lista
 	      if (isEmpty())
 	          return null;
 	      else return first.prev.data;
@@ -68,17 +73,17 @@ public class DoubleLinkedList<T> implements ListADT<T> {
 		   }
 
 	public T find(T elem) {
-	//Determina si la lista contiene un elemento concreto, y develve su referencia, null en caso de que no esté
+	//Determina si la lista contiene un elemento concreto, y develve su referencia, null en caso de que no estï¿½
 		// COMPLETAR EL CODIGO Y CALCULAR EL COSTE
 
 	}
 
 	public boolean isEmpty() 
-	//Determina si la lista está vacía
+	//Determina si la lista estï¿½ vacï¿½a
 	{ return first == null;};
 	
 	public int size() 
-	//Determina el número de elementos de la lista
+	//Determina el nï¿½mero de elementos de la lista
 	{ return count;};
 	
 	/** Return an iterator to the stack that iterates through the items . */ 
