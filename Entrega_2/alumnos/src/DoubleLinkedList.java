@@ -52,7 +52,7 @@ public class DoubleLinkedList<T> implements ListADT<T> {
 		}
    }
 
-
+//
 	public T remove(T elem) {
 	//Elimina un elemento concreto de la lista
 		// COMPLETAR EL CODIGO Y CALCULAR EL COSTE
