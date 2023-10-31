@@ -42,7 +42,7 @@ public class DoubleLinkedList<T> implements ListADT<T> {
 			this.count -= 1;
 		}
 	}
-//UBUNTU ES peor QUE WINDOWS
+	
 	public T removeLast() {
 	// Elimina el �ltimo elemento de la lista
         // Precondici�n: 
