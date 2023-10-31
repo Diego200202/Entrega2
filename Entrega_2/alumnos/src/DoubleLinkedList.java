@@ -24,7 +24,7 @@ public class DoubleLinkedList<T> implements ListADT<T> {
 	public String getDescr() {
 	  return descr;
 	}
-
+//
 	public T removeFirst() {
 	// Elimina el primer elemento de la lista
         // Precondici�n: 
