@@ -1,6 +1,6 @@
 package segundaFase;
 
-public class OrderedDoubleLinkedList<T> extends CircularDoubleLinkedList<T> implements OrderedListADT<T> {
+public class OrderedDoubleLinkedList<T> extends DoubleLinkedList<T> implements OrderedListADT<T> {
 	
 	public void add(T elem){
 		// COMPLETAR EL CODIGO Y CALCULAR EL COSTE
@@ -8,7 +8,7 @@ public class OrderedDoubleLinkedList<T> extends CircularDoubleLinkedList<T> impl
 	}
 
 	@Override
-	public void merge(CircularDoubleLinkedList<T> zerrenda) {
+	public void merge(DoubleLinkedList<T> zerrenda) {
 		// TODO Auto-generated method stub
 		
 	}

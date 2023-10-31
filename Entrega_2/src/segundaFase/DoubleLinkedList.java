@@ -3,7 +3,7 @@ package segundaFase;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-public class CircularDoubleLinkedList<T> implements ListADT<T> {
+public class DoubleLinkedList<T> implements ListADT<T> {
 
 	// Atributos
 	protected Node<T> first;  // apuntador al �ltimo
@@ -11,7 +11,7 @@ public class CircularDoubleLinkedList<T> implements ListADT<T> {
 	protected int count;
 
 	// Constructor
-	public CircularDoubleLinkedList() {
+	public DoubleLinkedList() {
         this.first = null;
 		this.descr = "";
 		this.count = 0;
@@ -74,15 +74,29 @@ public class CircularDoubleLinkedList<T> implements ListADT<T> {
 		// COMPLETAR EL CODIGO Y CALCULAR EL COSTE
 		if(this.isEmpty()) {
 			
-		}else if(this.size() == 1 && this.first.data.equals(elem)) {
+		}else if(this.size() == 1 && this.contains(elem)) {
 			this.first = null;
 			this.first.prev = null;
 			this.first.next = null;
 			return this.first.data;
-		}else if(this.size() == 1 && !this.first.data.equals(elem)) {
+		}else if(this.size() == 1 && !this.contains(elem)) {
 			return null;
 		}else {
 			Node<T> actual = this.first;
+			boolean eliminado = false;
+			if(this.contains(elem)) {
+				while(actual.next != this.first && !eliminado) {
+					if(actual.data.equals(elem)) {
+						actual.next.prev = actual.prev;
+						actual.prev.next = actual.next;
+						eliminado = true;
+					}
+					actual = actual.next;
+				}
+			}else {
+				return null;
+			}
+			return actual.data;
 		}
 		return null;
 	}
@@ -127,16 +141,21 @@ public class CircularDoubleLinkedList<T> implements ListADT<T> {
 	public T find(T elem) {
 	//Determina si la lista contiene un elemento concreto, y develve su referencia, null en caso de que no est�
 		// COMPLETAR EL CODIGO Y CALCULAR EL COSTE
+		if(this.contains(elem)) {
+			return elem;
+		}
 		return null;
 	}
 
-	public boolean isEmpty() 
+	public boolean isEmpty() {
 	//Determina si la lista est� vac�a
-	{ return first == null;};
+		return first == null;
+	}
 	
-	public int size() 
+	public int size() {
 	//Determina el n�mero de elementos de la lista
-	{ return count;};
+	 return count;
+	}
 	
 	/** Return an iterator to the stack that iterates through the items . */ 
 	public Iterator<T> iterator() { return new ListIterator(); } 

@@ -1,6 +1,6 @@
 package segundaFase;
 
-public class UnorderedCircularDoubleLinkedList<T> extends CircularDoubleLinkedList<T> implements UnorderedListADT<T> {
+public class UnorderedDoubleLinkedList<T> extends DoubleLinkedList<T> implements UnorderedListADT<T> {
 	
 	public void addToFront(T elem) {
 	// a�ade un elemento al comienzo
